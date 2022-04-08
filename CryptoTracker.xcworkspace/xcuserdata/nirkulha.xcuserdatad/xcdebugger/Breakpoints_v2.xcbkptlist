@@ -126,38 +126,6 @@
             endingLineNumber = "30"
             landmarkName = "refreshData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "FCAC817C-28F5-4EFD-978E-08ECABFAA6F2 - d4b225ec042754ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoTracker.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "70">
-               </Location>
-               <Location
-                  uuid = "FCAC817C-28F5-4EFD-978E-08ECABFAA6F2 - ac655809bdb216ed"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoTrackerTests.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTrackerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "30"
-                  endingLineNumber = "30"
-                  offsetFromSymbolStart = "70">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -285,38 +253,6 @@
             endingLineNumber = "31"
             landmarkName = "refreshData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "32BF7B54-7CC8-4CCF-B76D-2DE207BD5748 - 35e1904ff27c7ae9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;CryptoTracker.Rate&gt;) -&gt; () in CryptoTracker.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "196">
-               </Location>
-               <Location
-                  uuid = "32BF7B54-7CC8-4CCF-B76D-2DE207BD5748 - dda919dae033572b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Array&lt;CryptoTrackerTests.Rate&gt;) -&gt; () in CryptoTrackerTests.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTrackerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "31"
-                  endingLineNumber = "31"
-                  offsetFromSymbolStart = "196">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -333,38 +269,6 @@
             endingLineNumber = "34"
             landmarkName = "refreshData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0DD8E5C7-11FC-48D0-BC33-C7B6A3A443F7 - 369f0545f1b09f85"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in closure #1 (Swift.Array&lt;CryptoTracker.Rate&gt;) -&gt; () in CryptoTracker.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "49">
-               </Location>
-               <Location
-                  uuid = "0DD8E5C7-11FC-48D0-BC33-C7B6A3A443F7 - 44533bb937c1ca5d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in closure #1 () -&gt; () in closure #1 (Swift.Array&lt;CryptoTrackerTests.Rate&gt;) -&gt; () in CryptoTrackerTests.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTrackerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "34"
-                  endingLineNumber = "34"
-                  offsetFromSymbolStart = "49">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -381,38 +285,6 @@
             endingLineNumber = "20"
             landmarkName = "execute()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "69B28807-01C1-4544-878D-8CF2CFC60A34 - 229f2829b7de524d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoTracker.GetCryptoUseCase.execute() -&gt; PromiseKit.Promise&lt;Swift.Array&lt;CryptoTracker.Rate&gt;&gt;"
-                  moduleName = "CryptoTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Domain/UseCases/GetCryptoUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "145">
-               </Location>
-               <Location
-                  uuid = "69B28807-01C1-4544-878D-8CF2CFC60A34 - 3c8b7418478835a9"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "CryptoTrackerTests.GetCryptoUseCase.execute() -&gt; PromiseKit.Promise&lt;Swift.Array&lt;CryptoTrackerTests.Rate&gt;&gt;"
-                  moduleName = "CryptoTrackerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Domain/UseCases/GetCryptoUseCase.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "20"
-                  endingLineNumber = "20"
-                  offsetFromSymbolStart = "145">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -429,38 +301,6 @@
             endingLineNumber = "41"
             landmarkName = "refreshData()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "EC2DE128-4DCA-4FC2-80C8-A16C4A78FB17 - 80aa4f438cace835"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Error) -&gt; () in CryptoTracker.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTracker"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "98">
-               </Location>
-               <Location
-                  uuid = "EC2DE128-4DCA-4FC2-80C8-A16C4A78FB17 - e75b84535df418f5"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #2 (Swift.Error) -&gt; () in CryptoTrackerTests.CryptoViewModel.refreshData() -&gt; ()"
-                  moduleName = "CryptoTrackerTests"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/nirkulha/Documents/Development/Excercise/CryptoTracker/CryptoTracker/Presentation/ViewModel/CryptoViewModel.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "41"
-                  endingLineNumber = "41"
-                  offsetFromSymbolStart = "98">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

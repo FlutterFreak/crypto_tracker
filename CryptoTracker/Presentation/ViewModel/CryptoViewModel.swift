@@ -29,12 +29,12 @@ class CryptoViewModel: ObservableObject {
       
         getCryptoUseCase.execute().done(on:DispatchQueue.main) { newRates in
             print("Successfully got new rates: \(self.rates.count )")
-            DispatchQueue.main.async {
+          
                 withAnimation {
                     self.rates = newRates
                     self.loading = false
                 }
-            }
+    
             print("Successfully got new rates: \(self.rates.count )")
          
         }.catch{[weak self] error in
