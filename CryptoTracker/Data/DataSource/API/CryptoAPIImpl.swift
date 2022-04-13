@@ -10,8 +10,9 @@ import PromiseKit
 import Foundation
 
 struct CryptoAPIImpl: CryptoDataSource {
-
-    internal  func getCryptoData(currency: String) -> Promise<[Rate]>{
+    
+    
+    internal func getCryptoData(currency: String) -> Promise<[Rate]>{
         
         // Create the URL
     

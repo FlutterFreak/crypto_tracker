@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var vm : CryptoViewModel
-    
     init(getCryptoUseCase: GetCrypto){
         _vm = StateObject(wrappedValue: CryptoViewModel(getCryptoUseCase: getCryptoUseCase))
     }
@@ -22,10 +21,7 @@ struct ContentView: View {
                 }
                 .padding()
                 if  vm.loading == true {
-                    ProgressView().accessibility(identifier: "ProgressView")
-                        .onAppear {
-                            vm.refreshData()
-                    }
+                    ProgressView()
                 }else {
                     List(vm.filteredRates) { item in
                         HStack {
@@ -46,13 +42,17 @@ struct ContentView: View {
                 ToolbarItem {
                     Button("Refresh", action: vm.refreshData)
                 }
+            }.alert(item: $vm.error ){  error in
+                Alert(title: Text("Error"),
+                      message: Text(error.errorString),
+                                      dismissButton: .cancel())
             }
+          
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        .alert(item: $vm.error ){  error in
-            Alert(title: Text("Error"),
-                  message: Text(error.errorString),
-                                  dismissButton: .cancel())
+        
+        .task {
+            vm.refreshData()
         }
       
         
@@ -60,9 +60,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-   
+    static let getCryptoUseCase = GetCryptoUseCase(repo: CryptoRepositoryImpl(datasource: CryptoAPIImpl()))
     static var previews: some View {
-        ContentView(getCryptoUseCase: CryptoTrackerApp.getCryptoUseCase)
+        ContentView(getCryptoUseCase: getCryptoUseCase)
     }
 }
 
