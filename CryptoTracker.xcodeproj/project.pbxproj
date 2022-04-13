@@ -13,7 +13,6 @@
 		DBBD147E27FD8AE9006CCF57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147D27FD8AE9006CCF57 /* ContentView.swift */; };
 		DBBD148027FD8AEC006CCF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD147F27FD8AEC006CCF57 /* Assets.xcassets */; };
 		DBBD148327FD8AEC006CCF57 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD148227FD8AEC006CCF57 /* Preview Assets.xcassets */; };
-		DBBD149727FD8AEC006CCF57 /* CryptoTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD149627FD8AEC006CCF57 /* CryptoTrackerUITests.swift */; };
 		DBBD149927FD8AEC006CCF57 /* CryptoTrackerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD149827FD8AEC006CCF57 /* CryptoTrackerUITestsLaunchTests.swift */; };
 		DBBD14A727FD9DD6006CCF57 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14A627FD9DD6006CCF57 /* CryptoModel.swift */; };
 		DBBD14AF27FD9EBF006CCF57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14AE27FD9EBF006CCF57 /* Constants.swift */; };
@@ -40,6 +39,29 @@
 		DBBD14F128008CD8006CCF57 /* CryptoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C027FEC899006CCF57 /* CryptoEntity.swift */; };
 		DBBD14F328009533006CCF57 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14F228009533006CCF57 /* Utils.swift */; };
 		DBBD14F428009600006CCF57 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14F228009533006CCF57 /* Utils.swift */; };
+		DBBD14FC28067D2A006CCF57 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14FB28067D2A006CCF57 /* AppError.swift */; };
+		DBBD14FD28067FCF006CCF57 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14FB28067D2A006CCF57 /* AppError.swift */; };
+		DBBD14FF28068E61006CCF57 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14FE28068E61006CCF57 /* MockData.swift */; };
+		DBBD150128069923006CCF57 /* AppErrotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD150028069923006CCF57 /* AppErrotTest.swift */; };
+		DBBD15042806C031006CCF57 /* MockCryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14D6280004D5006CCF57 /* MockCryptoRepository.swift */; };
+		DBBD15052806C036006CCF57 /* MockGetCryptoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14DF28007D34006CCF57 /* MockGetCryptoUseCase.swift */; };
+		DBBD15072806C775006CCF57 /* GetCryptoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C827FF001E006CCF57 /* GetCryptoUseCase.swift */; };
+		DBBD15082806C778006CCF57 /* CryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B827FEC6E1006CCF57 /* CryptoRepository.swift */; };
+		DBBD15092806C77B006CCF57 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14A627FD9DD6006CCF57 /* CryptoModel.swift */; };
+		DBBD150A2806C77E006CCF57 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B227FDA038006CCF57 /* CryptoViewModel.swift */; };
+		DBBD150B2806C783006CCF57 /* CryptoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14BE27FEC7FF006CCF57 /* CryptoDataSource.swift */; };
+		DBBD150C2806C786006CCF57 /* CryptoAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C227FEC9E6006CCF57 /* CryptoAPIImpl.swift */; };
+		DBBD150D2806C789006CCF57 /* CryptoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C027FEC899006CCF57 /* CryptoEntity.swift */; };
+		DBBD150E2806C78D006CCF57 /* CryptoRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C527FEF32C006CCF57 /* CryptoRepositoryImpl.swift */; };
+		DBBD150F2806C7BE006CCF57 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14AE27FD9EBF006CCF57 /* Constants.swift */; };
+		DBBD15102806C7C1006CCF57 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14FB28067D2A006CCF57 /* AppError.swift */; };
+		DBBD15112806C7C5006CCF57 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14F228009533006CCF57 /* Utils.swift */; };
+		DBBD15122806C7F0006CCF57 /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147B27FD8AE9006CCF57 /* CryptoTrackerApp.swift */; };
+		DBBD15132806C80B006CCF57 /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147B27FD8AE9006CCF57 /* CryptoTrackerApp.swift */; };
+		DBBD15142806C817006CCF57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147D27FD8AE9006CCF57 /* ContentView.swift */; };
+		DBBD15152806C818006CCF57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147D27FD8AE9006CCF57 /* ContentView.swift */; };
+		DBBD15192806CBDC006CCF57 /* CryptoTrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD149627FD8AEC006CCF57 /* CryptoTrackerUITests.swift */; };
+		DBBD151B2806CD9D006CCF57 /* RateModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD151A2806CD9D006CCF57 /* RateModelTest.swift */; };
 		F2F20CF24ACD81D1B003F5C2 /* Pods_CryptoTracker_CryptoTrackerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB6D617FC8528F20058585F /* Pods_CryptoTracker_CryptoTrackerUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +116,10 @@
 		DBBD14DD28007A32006CCF57 /* CryptoViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewModelTest.swift; sourceTree = "<group>"; };
 		DBBD14DF28007D34006CCF57 /* MockGetCryptoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockGetCryptoUseCase.swift; sourceTree = "<group>"; };
 		DBBD14F228009533006CCF57 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		DBBD14FB28067D2A006CCF57 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		DBBD14FE28068E61006CCF57 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
+		DBBD150028069923006CCF57 /* AppErrotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppErrotTest.swift; sourceTree = "<group>"; };
+		DBBD151A2806CD9D006CCF57 /* RateModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateModelTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +223,8 @@
 				DBBD14D227FFFFD9006CCF57 /* APIMocks */,
 				DBBD14D027FF3DE2006CCF57 /* GetCryptoUseCaseTest.swift */,
 				DBBD14DD28007A32006CCF57 /* CryptoViewModelTest.swift */,
+				DBBD150028069923006CCF57 /* AppErrotTest.swift */,
+				DBBD151A2806CD9D006CCF57 /* RateModelTest.swift */,
 			);
 			path = CryptoTrackerTests;
 			sourceTree = "<group>";
@@ -318,6 +346,7 @@
 			children = (
 				DBBD14AE27FD9EBF006CCF57 /* Constants.swift */,
 				DBBD14F228009533006CCF57 /* Utils.swift */,
+				DBBD14FB28067D2A006CCF57 /* AppError.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -335,6 +364,7 @@
 			children = (
 				DBBD14D6280004D5006CCF57 /* MockCryptoRepository.swift */,
 				DBBD14DF28007D34006CCF57 /* MockGetCryptoUseCase.swift */,
+				DBBD14FE28068E61006CCF57 /* MockData.swift */,
 			);
 			path = MockServices;
 			sourceTree = "<group>";
@@ -582,6 +612,7 @@
 				DBBD14AF27FD9EBF006CCF57 /* Constants.swift in Sources */,
 				DBBD14B927FEC6E1006CCF57 /* CryptoRepository.swift in Sources */,
 				DBBD14A727FD9DD6006CCF57 /* CryptoModel.swift in Sources */,
+				DBBD14FC28067D2A006CCF57 /* AppError.swift in Sources */,
 				DBBD14EC28008C1C006CCF57 /* CryptoViewModel.swift in Sources */,
 				DBBD147E27FD8AE9006CCF57 /* ContentView.swift in Sources */,
 				DBBD14C627FEF32C006CCF57 /* CryptoRepositoryImpl.swift in Sources */,
@@ -599,16 +630,22 @@
 			files = (
 				DBBD14D828000665006CCF57 /* CryptoRepository.swift in Sources */,
 				DBBD14E028007D34006CCF57 /* MockGetCryptoUseCase.swift in Sources */,
+				DBBD14FD28067FCF006CCF57 /* AppError.swift in Sources */,
 				DBBD14D127FF3DE2006CCF57 /* GetCryptoUseCaseTest.swift in Sources */,
 				DBBD14F428009600006CCF57 /* Utils.swift in Sources */,
+				DBBD15142806C817006CCF57 /* ContentView.swift in Sources */,
 				DBBD14F128008CD8006CCF57 /* CryptoEntity.swift in Sources */,
 				DBBD14EF28008C9E006CCF57 /* CryptoAPIImpl.swift in Sources */,
 				DBBD14ED28008C5B006CCF57 /* CryptoModel.swift in Sources */,
+				DBBD15132806C80B006CCF57 /* CryptoTrackerApp.swift in Sources */,
 				DBBD14E228007DB9006CCF57 /* GetCryptoUseCase.swift in Sources */,
+				DBBD151B2806CD9D006CCF57 /* RateModelTest.swift in Sources */,
 				DBBD14D7280004D5006CCF57 /* MockCryptoRepository.swift in Sources */,
 				DBBD14EE28008C9A006CCF57 /* CryptoRepositoryImpl.swift in Sources */,
 				DBBD14E628008999006CCF57 /* CryptoViewModel.swift in Sources */,
 				DBBD14F028008CC3006CCF57 /* CryptoDataSource.swift in Sources */,
+				DBBD14FF28068E61006CCF57 /* MockData.swift in Sources */,
+				DBBD150128069923006CCF57 /* AppErrotTest.swift in Sources */,
 				DBBD14B027FD9EBF006CCF57 /* Constants.swift in Sources */,
 				DBBD14DE28007A32006CCF57 /* CryptoViewModelTest.swift in Sources */,
 			);
@@ -618,8 +655,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBBD150B2806C783006CCF57 /* CryptoDataSource.swift in Sources */,
+				DBBD15052806C036006CCF57 /* MockGetCryptoUseCase.swift in Sources */,
+				DBBD15192806CBDC006CCF57 /* CryptoTrackerUITests.swift in Sources */,
+				DBBD150D2806C789006CCF57 /* CryptoEntity.swift in Sources */,
+				DBBD15102806C7C1006CCF57 /* AppError.swift in Sources */,
+				DBBD15122806C7F0006CCF57 /* CryptoTrackerApp.swift in Sources */,
+				DBBD15082806C778006CCF57 /* CryptoRepository.swift in Sources */,
+				DBBD150F2806C7BE006CCF57 /* Constants.swift in Sources */,
+				DBBD15152806C818006CCF57 /* ContentView.swift in Sources */,
+				DBBD15092806C77B006CCF57 /* CryptoModel.swift in Sources */,
+				DBBD15042806C031006CCF57 /* MockCryptoRepository.swift in Sources */,
+				DBBD15112806C7C5006CCF57 /* Utils.swift in Sources */,
 				DBBD149927FD8AEC006CCF57 /* CryptoTrackerUITestsLaunchTests.swift in Sources */,
-				DBBD149727FD8AEC006CCF57 /* CryptoTrackerUITests.swift in Sources */,
+				DBBD150C2806C786006CCF57 /* CryptoAPIImpl.swift in Sources */,
+				DBBD15072806C775006CCF57 /* GetCryptoUseCase.swift in Sources */,
+				DBBD150E2806C78D006CCF57 /* CryptoRepositoryImpl.swift in Sources */,
+				DBBD150A2806C77E006CCF57 /* CryptoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

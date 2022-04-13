@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Rate: Identifiable,Equatable {
+struct Rate: Identifiable {
     var id = UUID().uuidString
     let time: String
     let asset_id_quote: String

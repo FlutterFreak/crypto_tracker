@@ -7,20 +7,28 @@
 
 
 import PromiseKit
+import Foundation
 
 struct CryptoAPIImpl: CryptoDataSource {
 
-    func getCryptoData(currency: String) -> Promise<[Rate]>{
+    internal  func getCryptoData(currency: String) -> Promise<[Rate]>{
         
         // Create the URL
     
-        let urlString = Constants.exchangeRateEndpoint + currency + Constants.exchangeRateQuery + Constants.apiKey
-           let url = URL(string: urlString)!
+       let urlString = Constants.exchangeRateEndpoint + currency + Constants.exchangeRateQuery + Constants.apiKey
+        
+        guard let url = URL(string: urlString) else {
+                   print("CryptoAPI: Invalid URL")
+            return Promise.init(error: NSError(
+                domain: "CryptoAPI",
+                code: 0,
+                userInfo: [NSLocalizedDescriptionKey: "Invalid URL"]))
+        }
             
         // Attempt to retrieve data
         
         return firstly {
-           URLSession.shared.dataTask(.promise, with: url)
+            URLSession.shared.dataTask(.promise, with: url)
          }.compactMap {
 
              let ratesData = try JSONDecoder().decode(CryptoEntity.self, from: $0.data)

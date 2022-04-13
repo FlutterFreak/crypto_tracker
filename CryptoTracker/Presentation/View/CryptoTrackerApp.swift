@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CryptoTrackerApp: App {
+    static let getCryptoUseCase = GetCryptoUseCase(repo: CryptoRepositoryImpl(datasource: CryptoAPIImpl()))
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(getCryptoUseCase: CryptoTrackerApp.getCryptoUseCase)
         }
     }
 }

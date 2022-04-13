@@ -15,7 +15,7 @@ protocol GetCrypto{
 struct GetCryptoUseCase: GetCrypto {
     var repo: CryptoRepository
     
-    func execute()->Promise<[Rate]>{
+    internal func execute()->Promise<[Rate]>{
         let cryptos = repo.getCryptoData(currency: "EUR")
         return cryptos
     }

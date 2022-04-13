@@ -9,41 +9,40 @@
 import SwiftUI
 import PromiseKit
 class CryptoViewModel: ObservableObject {
-    
-    var getCryptoUseCase :GetCrypto
+
+   var getCryptoUseCase :GetCrypto
     
     @Published var loading = true
     @Published var rates : [Rate] = []
     @Published var searchText = ""
+    @Published var error : AppError? = nil
     @Published var amount: Double = 100
     
-    init(getCryptoUseCase : GetCrypto = GetCryptoUseCase(repo: CryptoRepositoryImpl(datasource: CryptoAPIImpl()))){
+    init(getCryptoUseCase : GetCrypto ){
         self.getCryptoUseCase = getCryptoUseCase
     }
     
-    var filteredRates: [Rate] {
+   var filteredRates: [Rate] {
         return searchText == "" ? rates : rates.filter { $0.asset_id_quote.contains(searchText.uppercased()) }
     }
     
-    func refreshData() {
+   func refreshData(){
       
-        getCryptoUseCase.execute().done(on:DispatchQueue.main) { newRates in
-            print("Successfully got new rates: \(self.rates.count )")
-          
-                withAnimation {
+      getCryptoUseCase.execute().get { newRates in
                     self.rates = newRates
                     self.loading = false
-                }
-    
-            print("Successfully got new rates: \(self.rates.count )")
+            print("Successfully got new rates: \(String(describing: self.rates.count))")
          
-        }.catch{[weak self] error in
-            print("catched error",error)
-            guard self != nil else { return }
+        }.catch{ error in
+            
+            print("catched error",error.localizedDescription)
+            self.loading = false
+            self.error = AppError(errorString: error.localizedDescription)
+          
         }
     }
     
-    func calcRate(rate: Rate) -> Double {
+  func calcRate(rate: Rate) -> Double {
         return amount * rate.rate
     }
 }

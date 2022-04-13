@@ -8,8 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var vm = CryptoViewModel()
+    @StateObject private var vm : CryptoViewModel
     
+    init(getCryptoUseCase: GetCrypto){
+        _vm = StateObject(wrappedValue: CryptoViewModel(getCryptoUseCase: getCryptoUseCase))
+    }
     var body: some View {
         NavigationView {
             VStack( ) {
@@ -19,7 +22,10 @@ struct ContentView: View {
                 }
                 .padding()
                 if  vm.loading == true {
-                    ProgressView()
+                    ProgressView().accessibility(identifier: "ProgressView")
+                        .onAppear {
+                            vm.refreshData()
+                    }
                 }else {
                     List(vm.filteredRates) { item in
                         HStack {
@@ -43,9 +49,10 @@ struct ContentView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
-        .task {
-            vm.refreshData()
+        .alert(item: $vm.error ){  error in
+            Alert(title: Text("Error"),
+                  message: Text(error.errorString),
+                                  dismissButton: .cancel())
         }
       
         
@@ -53,8 +60,9 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+   
     static var previews: some View {
-        ContentView()
+        ContentView(getCryptoUseCase: CryptoTrackerApp.getCryptoUseCase)
     }
 }
 

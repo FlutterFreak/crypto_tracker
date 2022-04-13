@@ -13,7 +13,8 @@ class GetCryptoUseCaseTest: XCTestCase {
     var rates:[Rate]=[]
  
     func test_getCryptoUseCase_whenSuccessfully_retrievedData(){
-        let mockRepository:CryptoRepository = MockCryptoRepository()
+        let mockData = MockData.listLoadedSucccesFully()
+        let mockRepository:CryptoRepository = MockCryptoRepository(mockData: mockData)
         let useCase = GetCryptoUseCase(repo: mockRepository )
         rates =  useCase.execute().value!
         XCTAssertNotNil(rates)

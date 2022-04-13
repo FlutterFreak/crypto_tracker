@@ -5,7 +5,7 @@
 //  Created by Nirdesh Kulhar on 07/04/22.
 //
 
-struct CryptoEntity: Decodable {
+struct CryptoEntity: Decodable{
     let asset_id_base: String
     let rates: [RateEntity]
 }
