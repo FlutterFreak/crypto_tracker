@@ -16,7 +16,7 @@ struct ContentView: View {
     
     var body: some View {
         NavigationView {
-            VStack( ) {
+            VStack {
                 VStack {
                     Stepper("Amount: \(Int(vm.amount))€", value: $vm.amount, step: 100).accessibility(identifier: "Stepper")
                     Slider(value: $vm.amount, in: 1...10_000).accessibility(identifier: "Slider")
@@ -28,10 +28,10 @@ struct ContentView: View {
                 }else {
                     List(vm.rates) { item in
                         HStack {
-                            Text(item.asset_id_quote)
+                            Text(item.asset_id_quote).font(.subheadline)
                                 .bold()
                             Spacer()
-                            Text("\(vm.calcRate(rate: item), specifier: "%.2f")")
+                            Text("\(vm.calcRate(rate: item), specifier: "%.2f")").font(.caption)
                         }
                     }
                     .accessibility(identifier: "CryptoList")
@@ -39,18 +39,23 @@ struct ContentView: View {
                 Spacer()
             }
             .navigationTitle("Crypto Tracker")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem {
-                    Button("Refresh", action: vm.refreshData)
+                    Button("Refresh", action: vm.refreshData).font(.caption)
                 }
-            }.alert(item: $vm.error ){  error in
+                
+            }
+            .alert(item: $vm.error ){  error in
                 Alert(title: Text("Error"),
                       message: Text(error.errorString),
                       dismissButton: .cancel())
             }
+          
             
-        }
-        .navigationViewStyle(StackNavigationViewStyle())
+        }.navigationViewStyle(StackNavigationViewStyle())
+       
         
     }
 }
