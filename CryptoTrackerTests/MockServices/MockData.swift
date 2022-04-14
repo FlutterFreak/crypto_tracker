@@ -10,13 +10,16 @@ import PromiseKit
 @testable import CryptoTracker
 
 class MockData {
+    
     static func listLoadedSucccesFully() -> Promise<[Rate]>{
         var rates:[Rate]=[]
+        let defferedPromise = Promise<[Rate]>.pending()
         if let path = Bundle(for: GetCryptoUseCaseTest.self).path(forResource: "CryptoAPI", ofType: "json") {
             do {
                 if   let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe){
                     let cryptoEntity = try JSONDecoder().decode(CryptoEntity.self, from: data)
                      rates = Utils.mapEntityToModel(entity:cryptoEntity)
+                    defferedPromise.resolver.fulfill(rates)
                 }
             
             }
@@ -24,7 +27,7 @@ class MockData {
                 // handle error
             }
         }
-        return Promise.value(rates)
+        return defferedPromise.promise
     }
     
     static func listLoadingFailed() -> Promise<[Rate]>{

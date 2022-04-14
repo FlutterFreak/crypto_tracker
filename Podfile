@@ -7,6 +7,8 @@ target 'CryptoTracker' do
 
   # Pods for CryptoTracker
     pod 'PromiseKit'
+    pod 'Quick'
+    pod 'Nimble'
 
   target 'CryptoTrackerTests' do
     inherit! :search_paths

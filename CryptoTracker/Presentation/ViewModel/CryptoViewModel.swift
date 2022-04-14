@@ -12,11 +12,11 @@ class CryptoViewModel: ObservableObject {
 
    var getCryptoUseCase :GetCrypto
     
-    @Published var loading = true
-    @Published var rates : [Rate] = []
-    @Published var searchText = ""
-    @Published var error : AppError? = nil
-    @Published var amount: Double = 100
+    @Published private(set) var loading = true
+    @Published private(set) var rates : [Rate] = []
+    @Published  var searchText = ""
+    @Published  var error : AppError? = nil
+    @Published  var amount: Double = 100
     
     init(getCryptoUseCase : GetCrypto ){
         self.getCryptoUseCase = getCryptoUseCase
@@ -26,20 +26,22 @@ class CryptoViewModel: ObservableObject {
         return searchText == "" ? rates : rates.filter { $0.asset_id_quote.contains(searchText.uppercased()) }
     }
     
-   func refreshData(){
+   func refreshData() {
       
-      getCryptoUseCase.execute().get { newRates in
-                    self.rates = newRates
-                    self.loading = false
-            print("Successfully got new rates: \(String(describing: self.rates.count))")
+       firstly {
+           getCryptoUseCase.execute()
+       }.done(on: DispatchQueue.main) { newRates in
+           self.rates = newRates
+           self.loading = false
+        print("Successfully got new rates: \(String(describing: self.rates.count))")
+       }.catch(on: DispatchQueue.main) { error in
+           
+           print("catched error",error.localizedDescription)
+           self.loading = false
+           self.error = AppError(errorString: error.localizedDescription)
          
-        }.catch{ error in
-            
-            print("catched error",error.localizedDescription)
-            self.loading = false
-            self.error = AppError(errorString: error.localizedDescription)
-          
-        }
+       }
+
     }
     
   func calcRate(rate: Rate) -> Double {

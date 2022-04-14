@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var vm : CryptoViewModel
-    init(getCryptoUseCase: GetCrypto){
+    init(getCryptoUseCase: GetCrypto = .init()){
         _vm = StateObject(wrappedValue: CryptoViewModel(getCryptoUseCase: getCryptoUseCase))
     }
     var body: some View {
@@ -60,7 +60,7 @@ struct ContentView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
-    static let getCryptoUseCase = GetCryptoUseCase(repo: CryptoRepositoryImpl(datasource: CryptoAPIImpl()))
+    let getCryptoUseCase = GetCryptoUseCase(repo: CryptoRepositoryImpl(datasource: CryptoAPIImpl()))
     static var previews: some View {
         ContentView(getCryptoUseCase: getCryptoUseCase)
     }
