@@ -14,14 +14,14 @@ class MockGetCryptoUseCase : GetCrypto{
     var mockData:Promise<[Rate]>
     
     init(mockData: Promise<[Rate]>) {
-            self.mockData = mockData
-        }
+        self.mockData = mockData
+    }
     
     func execute() -> Promise<[Rate]> {
         return mockData
-       
+        
     }
-    }
-    
-    
- 
+}
+
+
+

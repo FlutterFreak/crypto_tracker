@@ -18,10 +18,10 @@ class MockData {
             do {
                 if   let data = try? Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe){
                     let cryptoEntity = try JSONDecoder().decode(CryptoEntity.self, from: data)
-                     rates = Utils.mapEntityToModel(entity:cryptoEntity)
+                    rates = Utils.mapEntityToModel(entity:cryptoEntity)
                     defferedPromise.resolver.fulfill(rates)
                 }
-            
+                
             }
             catch {
                 // handle error
@@ -32,9 +32,9 @@ class MockData {
     
     static func listLoadingFailed() -> Promise<[Rate]>{
         return Promise.init(error: NSError(
-            domain: "CryptoAPI",
-            code: 0,
-            userInfo: [NSLocalizedDescriptionKey: "Failed to load data"]))
+                                domain: "CryptoAPI",
+                                code: 0,
+                                userInfo: [NSLocalizedDescriptionKey: "Failed to load data"]))
     }
     
 }

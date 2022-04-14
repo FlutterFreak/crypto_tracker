@@ -9,9 +9,9 @@ import XCTest
 import PromiseKit
 @testable import CryptoTracker
 class GetCryptoUseCaseTest: XCTestCase {
-  
+    
     var rates:[Rate]=[]
- 
+    
     func test_getCryptoUseCase_whenSuccessfully_retrievedData(){
         let mockData = MockData.listLoadedSucccesFully()
         let mockRepository:CryptoRepository = MockCryptoRepository(mockData: mockData)
@@ -21,5 +21,5 @@ class GetCryptoUseCaseTest: XCTestCase {
         XCTAssertTrue(rates.count>0)
         XCTAssertEqual(rates[0].asset_id_quote,"USD")
     }
-
+    
 }

@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0C1117D4A5F75284415C1E8E /* Pods_CryptoTrackerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1CE4512D13523A0DADC7F50 /* Pods_CryptoTrackerTests.framework */; };
 		7DCB844B578F86F71E2C5F0C /* Pods_CryptoTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A68762A3F48E2710BFEFCD /* Pods_CryptoTracker.framework */; };
+		DB3ABFF4280805CA00E6ACEF /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B227FDA038006CCF57 /* CryptoViewModel.swift */; };
+		DB5AE486280800F100F2E9F7 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B227FDA038006CCF57 /* CryptoViewModel.swift */; };
 		DBBD147C27FD8AE9006CCF57 /* CryptoTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147B27FD8AE9006CCF57 /* CryptoTrackerApp.swift */; };
 		DBBD147E27FD8AE9006CCF57 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD147D27FD8AE9006CCF57 /* ContentView.swift */; };
 		DBBD148027FD8AEC006CCF57 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBBD147F27FD8AEC006CCF57 /* Assets.xcassets */; };
@@ -29,7 +31,6 @@
 		DBBD14DE28007A32006CCF57 /* CryptoViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14DD28007A32006CCF57 /* CryptoViewModelTest.swift */; };
 		DBBD14E028007D34006CCF57 /* MockGetCryptoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14DF28007D34006CCF57 /* MockGetCryptoUseCase.swift */; };
 		DBBD14E228007DB9006CCF57 /* GetCryptoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C827FF001E006CCF57 /* GetCryptoUseCase.swift */; };
-		DBBD14E628008999006CCF57 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B227FDA038006CCF57 /* CryptoViewModel.swift */; };
 		DBBD14E7280089A7006CCF57 /* GetCryptoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C827FF001E006CCF57 /* GetCryptoUseCase.swift */; };
 		DBBD14EC28008C1C006CCF57 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B227FDA038006CCF57 /* CryptoViewModel.swift */; };
 		DBBD14ED28008C5B006CCF57 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14A627FD9DD6006CCF57 /* CryptoModel.swift */; };
@@ -48,7 +49,6 @@
 		DBBD15072806C775006CCF57 /* GetCryptoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C827FF001E006CCF57 /* GetCryptoUseCase.swift */; };
 		DBBD15082806C778006CCF57 /* CryptoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B827FEC6E1006CCF57 /* CryptoRepository.swift */; };
 		DBBD15092806C77B006CCF57 /* CryptoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14A627FD9DD6006CCF57 /* CryptoModel.swift */; };
-		DBBD150A2806C77E006CCF57 /* CryptoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14B227FDA038006CCF57 /* CryptoViewModel.swift */; };
 		DBBD150B2806C783006CCF57 /* CryptoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14BE27FEC7FF006CCF57 /* CryptoDataSource.swift */; };
 		DBBD150C2806C786006CCF57 /* CryptoAPIImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C227FEC9E6006CCF57 /* CryptoAPIImpl.swift */; };
 		DBBD150D2806C789006CCF57 /* CryptoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBBD14C027FEC899006CCF57 /* CryptoEntity.swift */; };
@@ -436,7 +436,6 @@
 		DBBD147027FD8AE9006CCF57 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1300;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
@@ -637,12 +636,12 @@
 				DBBD14F128008CD8006CCF57 /* CryptoEntity.swift in Sources */,
 				DBBD14EF28008C9E006CCF57 /* CryptoAPIImpl.swift in Sources */,
 				DBBD14ED28008C5B006CCF57 /* CryptoModel.swift in Sources */,
+				DB5AE486280800F100F2E9F7 /* CryptoViewModel.swift in Sources */,
 				DBBD15132806C80B006CCF57 /* CryptoTrackerApp.swift in Sources */,
 				DBBD14E228007DB9006CCF57 /* GetCryptoUseCase.swift in Sources */,
 				DBBD151B2806CD9D006CCF57 /* RateModelTest.swift in Sources */,
 				DBBD14D7280004D5006CCF57 /* MockCryptoRepository.swift in Sources */,
 				DBBD14EE28008C9A006CCF57 /* CryptoRepositoryImpl.swift in Sources */,
-				DBBD14E628008999006CCF57 /* CryptoViewModel.swift in Sources */,
 				DBBD14F028008CC3006CCF57 /* CryptoDataSource.swift in Sources */,
 				DBBD14FF28068E61006CCF57 /* MockData.swift in Sources */,
 				DBBD150128069923006CCF57 /* AppErrotTest.swift in Sources */,
@@ -660,6 +659,7 @@
 				DBBD15192806CBDC006CCF57 /* CryptoTrackerUITests.swift in Sources */,
 				DBBD150D2806C789006CCF57 /* CryptoEntity.swift in Sources */,
 				DBBD15102806C7C1006CCF57 /* AppError.swift in Sources */,
+				DB3ABFF4280805CA00E6ACEF /* CryptoViewModel.swift in Sources */,
 				DBBD15122806C7F0006CCF57 /* CryptoTrackerApp.swift in Sources */,
 				DBBD15082806C778006CCF57 /* CryptoRepository.swift in Sources */,
 				DBBD150F2806C7BE006CCF57 /* Constants.swift in Sources */,
@@ -671,7 +671,6 @@
 				DBBD150C2806C786006CCF57 /* CryptoAPIImpl.swift in Sources */,
 				DBBD15072806C775006CCF57 /* GetCryptoUseCase.swift in Sources */,
 				DBBD150E2806C78D006CCF57 /* CryptoRepositoryImpl.swift in Sources */,
-				DBBD150A2806C77E006CCF57 /* CryptoViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -742,7 +741,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -797,7 +796,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -824,7 +823,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -855,7 +854,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -879,7 +878,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWM6H9KCUD;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -905,7 +904,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWM6H9KCUD;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -930,6 +929,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWM6H9KCUD;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -954,6 +954,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = RWM6H9KCUD;
 				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

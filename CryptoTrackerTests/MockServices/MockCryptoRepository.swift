@@ -13,11 +13,11 @@ class MockCryptoRepository : CryptoRepository{
     let mockData:Promise<[Rate]>
     
     init(mockData: Promise<[Rate]>) {
-            self.mockData = mockData
-        }
+        self.mockData = mockData
+    }
     
     func getCryptoData(currency: String) -> Promise<[Rate]> {
         return mockData
     }
- 
+    
 }

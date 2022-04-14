@@ -9,9 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var vm : CryptoViewModel
-    init(getCryptoUseCase: GetCrypto = .init()){
-        _vm = StateObject(wrappedValue: CryptoViewModel(getCryptoUseCase: getCryptoUseCase))
+    
+    init(cryptoViewModel: CryptoViewModel){
+        _vm = StateObject(wrappedValue: cryptoViewModel)
     }
+    
     var body: some View {
         NavigationView {
             VStack( ) {
@@ -22,8 +24,9 @@ struct ContentView: View {
                 .padding()
                 if  vm.loading == true {
                     ProgressView()
+                        .onAppear(perform: vm.refreshData)
                 }else {
-                    List(vm.filteredRates) { item in
+                    List(vm.rates) { item in
                         HStack {
                             Text(item.asset_id_quote)
                                 .bold()
@@ -31,8 +34,6 @@ struct ContentView: View {
                             Text("\(vm.calcRate(rate: item), specifier: "%.2f")")
                         }
                     }
-                    .listStyle(.plain)
-                    .searchable(text: $vm.searchText)
                     .accessibility(identifier: "CryptoList")
                 }
                 Spacer()
@@ -45,24 +46,20 @@ struct ContentView: View {
             }.alert(item: $vm.error ){  error in
                 Alert(title: Text("Error"),
                       message: Text(error.errorString),
-                                      dismissButton: .cancel())
+                      dismissButton: .cancel())
             }
-          
+            
         }
         .navigationViewStyle(StackNavigationViewStyle())
-        
-        .task {
-            vm.refreshData()
-        }
-      
         
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
-    let getCryptoUseCase = GetCryptoUseCase(repo: CryptoRepositoryImpl(datasource: CryptoAPIImpl()))
+    
     static var previews: some View {
-        ContentView(getCryptoUseCase: getCryptoUseCase)
+
+        ContentView(cryptoViewModel: Utils.viewModel)
     }
 }
 

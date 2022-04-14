@@ -8,6 +8,6 @@
 import Foundation
 
 struct AppError: Identifiable {
-   var id = UUID().uuidString
-   let errorString: String
+    var id = UUID().uuidString
+    let errorString: String
 }

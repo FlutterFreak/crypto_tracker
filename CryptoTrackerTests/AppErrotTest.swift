@@ -8,12 +8,12 @@
 import XCTest
 
 class AppErrotTest: XCTestCase {
-
+    
     func test_app_error(){
         let appError = AppError(errorString: "Test Error")
         XCTAssertEqual(appError.errorString, "Test Error")
         XCTAssertNotNil(appError.id)
         
     }
-
+    
 }

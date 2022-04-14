@@ -8,7 +8,7 @@
 import PromiseKit
 
 protocol CryptoRepository{
-  
+    
     func getCryptoData(currency: String) -> Promise<[Rate]>
     
 }
